@@ -1,6 +1,6 @@
 # Rasa Action Examples
 
-<img src="icon.png" width=150 height=150 align="right">
+<img src="example-icon.png" width=150 height=150 align="right">
 <img src="square-logo.svg" width=150 height=150 align="right">
 
 This repository contains demonstrations of Rasa custom actions. These custom actions
