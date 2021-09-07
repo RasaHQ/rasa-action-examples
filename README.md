@@ -26,4 +26,4 @@ but lightweight enough so that they are easy to copy into an existing Rasa proje
 
 ### Fallback Buttons 
 
-The `fallback-button` contains a custom action that triggers whenever the NLU fallback is triggered. It will then try to generate buttons with suggestions for the user on what to do next.
+The `fallback-button` folder contains a custom action that triggers whenever the NLU fallback is triggered. It will then try to generate buttons with suggestions for the user on what to do next.
