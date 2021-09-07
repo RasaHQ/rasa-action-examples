@@ -1,0 +1,59 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- what_happened:
+    use_entities: true
+- inform:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- new_order:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_new_order:
+  - text: Placing a new order right away!
+  utter_what_happened:
+  - text: I'm sure the package is still underway!
+  utter_inform:
+  - text: Stroopwafels are Dutch caramel cookies. They come in all shapes and sizes.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_custom_fallback
+- utter_greet
+- utter_what_happened
+forms: {}
+e2e_actions: []

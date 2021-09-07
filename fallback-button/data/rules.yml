@@ -1,0 +1,33 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Handle the rephrase fallback with a custom action
+  steps:
+  - intent: nlu_fallback
+  - action: action_custom_fallback
+
+- rule: new order
+  steps:
+  - intent: new_order
+  - action: utter_new_order
+
+- rule: what happened
+  steps:
+  - intent: what_happened
+  - action: utter_what_happened
+
+- rule: inform
+  steps:
+  - intent: inform
+  - action: utter_inform

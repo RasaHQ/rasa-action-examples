@@ -16,8 +16,14 @@ not something that is part of core Rasa.
 
 # How to Use 
 
-In the `examples` folder you will find many small Rasa projects. Each Rasa project
+Every folder in this project represents a Rasa project. Each Rasa project
 contains a custom action that demonstrates something novel. Each project comes with
-a `readme.md` file that explains how the custom action works. The goal is to keep
-all the examples minimal in nature so that they are just enough to explain a concept
+a `readme.md` file that explains how the custom action works and the goal is to keep
+all the examples minimal in nature. They should be just enough to explain a concept
 but lightweight enough so that they are easy to copy into an existing Rasa project.
+
+## Existing Examples 
+
+### Fallback Buttons 
+
+The `fallback-button` contains a custom action that triggers whenever the NLU fallback is triggered. It will then try to generate buttons with suggestions for the user on what to do next.
