@@ -4,7 +4,6 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-import requests as rq
 
 class ActionSuggestRecipe(Action):
 
@@ -16,7 +15,8 @@ class ActionSuggestRecipe(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         async with httpx.AsyncClient() as client:
-            resp = await client.post("http://localhost:12345/search", json={"data": [{"mime_type": "text/plain", "text": tracker.latest_message['text']}]})
+            json_data = {"data": [{"mime_type": "text/plain", "text": tracker.latest_message['text']}]}
+            resp = await client.post("http://localhost:12345/search", json=json_data)
         
         dispatcher.utter_message(text="I found these recipes:")
         matches = resp.json()['data']['docs'][0]['matches']
