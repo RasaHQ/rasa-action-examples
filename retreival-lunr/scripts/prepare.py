@@ -49,11 +49,5 @@ def search():
             print({'score': d['score'], 'name': item['name'], 'link': item['link']})
 
 
-@app.command()
-def serve():
-    """Use Jina to search in the recipe data."""
-    with flow:
-        flow.block()
-
 if __name__ == "__main__":
     app()
