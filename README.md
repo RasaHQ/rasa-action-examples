@@ -27,3 +27,11 @@ but lightweight enough so that they are easy to copy into an existing Rasa proje
 ### Fallback Buttons 
 
 The `fallback-button` folder contains a custom action that triggers whenever the NLU fallback is triggered. It will then try to generate buttons with suggestions for the user on what to do next.
+
+### Retreival Lunr
+
+The `retreival-lunr` folder contains a project with a custom action can uses lunr.py to recommend recipes to a user.
+
+### Retreival Jina
+
+The `retreival-jina` folder contains a project with a custom action can uses jina to recommend recipes to a user.
