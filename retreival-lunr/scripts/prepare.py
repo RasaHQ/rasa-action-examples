@@ -46,7 +46,8 @@ def search():
         res = idx.search(input("Enter a query: "))
         for d in res[:5]:
             item = db[d['ref']]
-            print({'score': d['score'], 'name': item['name'], 'link': item['link']})
+            # print({'score': d['score'], 'name': item['name'], 'link': item['link']})
+            print(item['name'])
 
 
 if __name__ == "__main__":

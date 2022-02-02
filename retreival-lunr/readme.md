@@ -13,19 +13,13 @@ To get started, we first need to index the dataset. We've made a script that can
 python scripts/prepare.py index
 ```
 
-Once the dataset is indexed, you can use the jina pipeline to find search.
+Once the dataset is indexed, you can use lunr search in our data.
 
 ```
 python scripts/prepare.py search
 ```
 
-Given an indexed dataset, we can now also use it inside of a custom action too. The custom action is implemented as a proxy, so you'll need to run a jina server to use it.
-
-```
-python scripts/prepare.py search
-```
-
-Once it's active you can talk to the assitant by running the Rasa shell. Don't forget to run the action server too!
+Given an indexed dataset, we can now also use it inside of a custom action too. You can talk to the assitant by running the Rasa shell. Don't forget to run the action server too!
 
 ```
 python -m rasa run actions
